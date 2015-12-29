@@ -1,0 +1,91 @@
+.tnp-notification {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 16px;
+  max-width: 320px;
+  text-align: right;
+  box-sizing: border-box;
+
+  &__item-container {
+    margin-top: 8px;
+    height: 32px;
+    overflow: visible;
+    transition: all .2s ease-in-out;
+    transform: translate(0, 0);
+
+    &.ng-enter {
+      transform: translate(0, 32px);
+      opacity: 0;
+      height: 0px;
+    }
+
+    &.ng-enter.ng-enter-active {
+      transform: translate(0, 0);
+      opacity: 1;
+      height: 32px;
+    }
+
+    &.ng-leave {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+
+    &.ng-leave.ng-leave-active {
+      transform: translate(0, -32px);
+      opacity: 0;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    color: white;
+    padding: 0 16px;
+    line-height: 32px;
+    font-size: 14px;
+    background: #2c5b6b;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    opacity: 1;
+    text-align: left;
+    transition: opacity .2s ease-in-out;
+
+    &--info {
+
+      &:before {
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        background: url(./info--light.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        vertical-align: text-bottom;
+      }
+    }
+
+    &--warning {
+      background: #6b542e;
+    }
+
+    &--error {
+      background: #6c2728;
+
+      &:before {
+        display: inline-block;
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        background: url(./error--light.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<div class="tnp-notification">
+  <div class="tnp-notification__item-container" ng-repeat="item in notification.instances">
+    <div class="tnp-notification__item" ng-class="'tnp-notification__item--' + item.type" ng-bind="::item.message" ng-style="{ opacity: 1 + ($index - notification.instances.length) * .15 }"></div>
+  </div>
+</div>
