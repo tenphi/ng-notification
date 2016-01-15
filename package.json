@@ -1,5 +1,5 @@
 {
-  "name": "tenphi-ng-notification",
+  "name": "@tenphi/ng-notification",
   "version": "0.0.1",
   "description": "Lightweight notifications for AngularJS",
   "main": "lib/notification.js",
